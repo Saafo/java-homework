@@ -1,0 +1,17 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Person",
+            "request": "launch",
+            "mainClass": "Person",
+            "projectName": "Homework_ac40d02d"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Book",
+            "request": "launch",
+            "mainClass": "Book"
+        }
+    ]
+}
