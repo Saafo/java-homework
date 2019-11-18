@@ -1,16 +1,17 @@
-public class MovableCircle extends MovableCircle implements Movable {
+import MovablePoint;
+public class MovableCircle implements Movable {
     private int radius;
     private MovablePoint center;
 
     public MovableCircle(int x,int y,int xSpeed,int ySpeed,int radius) {
-        self.x = x;
-        self.y = y;
-        self.xSpeed = xSpeed;
-        self.ySpeed = ySpeed;
+        center.x = x;
+        center.y = y;
+        center.xSpeed = xSpeed;
+        center.ySpeed = ySpeed;
         self.radius = radius;
     }
     public String toString() {
-        return String.format("x=%d,y=%d,xSpeed=%d,ySpeed=%d,radius=%d.\n", x,y,xSpeed,ySpeed,radius);
+        return String.format("x=%d,y=%d,xSpeed=%d,ySpeed=%d,radius=%d.\n", center.x,center.y,center.xSpeed,center.ySpeed,radius);
     }
     public void moveUp() {
         //人晕了 这写啥啊 难道是：
