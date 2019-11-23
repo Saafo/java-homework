@@ -20,7 +20,7 @@ public class ExceptionTest{
                     throw new MyException("Detected error in index: " + i);
                 }
             }
-        } catch (Exception e) {
+        } catch (MyException e) {
             e.printStackTrace();
         }
     }
