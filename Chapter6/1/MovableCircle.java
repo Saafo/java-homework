@@ -13,17 +13,20 @@ public class MovableCircle implements Movable {
     public String toString() {
         return String.format("x=%d,y=%d,xSpeed=%d,ySpeed=%d,radius=%d.\n", center.x,center.y,center.xSpeed,center.ySpeed,radius);
     }
-    public void moveUp() {
-        //人晕了 这写啥啊 难道是：
-        System.out.println("Moved up.\n");
+    public void moveUp(int d) {
+        center.y += d;
+        System.out.printf("Moved up by %d, the center now is at (%d , %d).\n",d,center.x,center.y);
     }
-    public void moveDown() {
-        System.out.println("Moved down.\n");
+    public void moveDown(int d) {
+        center.y -= d;
+        System.out.printf("Moved down by %d, the center now is at (%d , %d).\n",d,center.x,center.y);
     }
-    public void moveLeft() {
-        System.out.println("Moved left.\n");
+    public void moveLeft(int d) {
+        center.x -= d;
+        System.out.printf("Moved left by %d, the center now is at (%d , %d).\n",d,center.x,center.y);
     }
-    public void moveRight() {
-        System.out.println("Moved right.\n");
+    public void moveRight(int d) {
+        center.x += d;
+        System.out.printf("Moved right by %d, the center now is at (%d , %d).\n",d,center.x,center.y);
     }
 }
