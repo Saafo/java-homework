@@ -9,7 +9,7 @@ public class FileIO {
                 int i;
                 // InputStream fin = new FileInputStream("./rawdata.txt");
                 // InputStream bin = new BufferedInputStream(file);
-                Reader reader = new FileReader("./rawdata.txt");
+                Reader reader = new FileReader(file);
                 while ((i = reader.read()) != -1) {
                     builder.append(String.valueOf((char) i));
                 }
