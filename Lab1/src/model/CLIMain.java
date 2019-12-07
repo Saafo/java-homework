@@ -5,7 +5,7 @@ import javafx.scene.control.Alert;
 
 import java.io.IOException;
 
-public class Program {
+public class CLIMain {
     Myfile myfile2 = new Myfile("student.data");
     Myfile myfile3 = new Myfile("teacher.data");
     Myfile myfile4 = new Myfile("course.data");
@@ -17,7 +17,7 @@ public class Program {
     Schedule[] ScheduleList;
     Electivecourse[] ElectivecourseList;
 
-    public Program() throws IOException {
+    public CLIMain() throws IOException {
     }
 
     public void write5Files(boolean gui) throws IOException {
@@ -284,9 +284,9 @@ public class Program {
     }
 
     public static void main(String[] args) throws Exception {
-        Program program = new Program();
-        program.write5Files(false);
-        program.read5Files(false);
-        program.SearchInfoBySid("sid1",false,null);
+        CLIMain climain = new CLIMain();
+        climain.write5Files(false);
+        climain.read5Files(false);
+        climain.SearchInfoBySid("sid1",false,null);
     }
 }

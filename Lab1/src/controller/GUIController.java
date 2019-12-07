@@ -13,10 +13,10 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.text.Text;
-import model.Program;
+import model.CLIMain;
 import model.TableContent;
 
-public class GUIController extends Program {
+public class GUIController extends CLIMain {
 
     @FXML // ResourceBundle that was given to the FXMLLoader
     private ResourceBundle resources;
@@ -77,7 +77,7 @@ public class GUIController extends Program {
         table.setItems(data);
     }
     public void ReadButtonClick() throws Exception {
-//        model.Program program = new model.Program();
+//        model.CLIMain program = new model.CLIMain();
 //        program.write5Files(false);
 //        program.read5Files(true);
         if(markW == 0) {
@@ -92,7 +92,7 @@ public class GUIController extends Program {
         markR = 1;
     }
     public void WriteButtonClick() throws Exception {
-//        model.Program program = new model.Program();
+//        model.CLIMain program = new model.CLIMain();
 //        program.write5Files(true);
         write5Files(true);
         markW = 1;
@@ -117,7 +117,7 @@ public class GUIController extends Program {
 
         table.getItems().clear();
         String text = textfield.getText();//获取文本框输入的内容
-//        model.Program program = new model.Program();
+//        model.CLIMain program = new model.CLIMain();
 //        program.write5Files(false);
 //        program.read5Files(false);
 //        program.SearchInfoBySid(text,true, data);
