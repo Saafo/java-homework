@@ -12,7 +12,7 @@ public class GUIMain extends Application {
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("../view/GUIView.fxml"));
         primaryStage.setTitle("ElectCourseInfo GUI");
-        primaryStage.setScene(new Scene(root, 508, 512));
+        primaryStage.setScene(new Scene(root, 508, 641));
         primaryStage.show();
     }
 

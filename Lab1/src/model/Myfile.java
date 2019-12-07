@@ -13,10 +13,9 @@ public class Myfile {
 
     Myfile(String FileName) throws IOException {
         this.opfile = new File(FileName); //File opfile = new File(FileName);
-        if (opfile.exists()) {
-            opfile.delete();
+        if (!opfile.exists()) {
+            opfile.createNewFile();
         }
-        opfile.createNewFile();
         if (!opfile.canRead()) {
             System.out.println("file cannot be read. Please check authority.");
         }
