@@ -44,7 +44,7 @@ public class Electivecourse implements Serializable {
         this.sid = sid;
     }
 
-    Electivecourse(String elid, String sid, String classid) {
+    public Electivecourse(String elid, String sid, String classid) {
         this.elid = elid;
         this.sid = sid;
         this.classid = classid;

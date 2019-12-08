@@ -1,6 +1,9 @@
 package model;
 
 public class Teacher extends Person {
+
+    private static final long serialVersionUID = 1L;
+
     private String tid;
     private String title;//职称
 
@@ -29,7 +32,7 @@ public class Teacher extends Person {
         this.title = title;
     }
 
-    Teacher(String tid, String name, String sex, int age, String title) {
+    public Teacher(String tid, String name, String sex, int age, String title) {
         super(name, sex, age);
         this.tid = tid;
         this.title = title;

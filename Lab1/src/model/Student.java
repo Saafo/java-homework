@@ -31,8 +31,8 @@ public class Student extends Person {
         this.sid = sid;
     }
 
-    Student(String sid, String name, String sex,
-            int age, String major) {
+    public Student(String sid, String name, String sex,
+                   int age, String major) {
         super(name,sex,age);
         this.sid = sid;
         this.major = major;

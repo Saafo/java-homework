@@ -44,7 +44,7 @@ public class Course implements Serializable {
         this.cname = cname;
     }
 
-    Course(String cid, String cname, int chour) {
+    public Course(String cid, String cname, int chour) {
         this.cid = cid;
         this.cname = cname;
         this.chour = chour;

@@ -1,7 +1,8 @@
-package model;
+package controller;
 
 import javafx.collections.ObservableList;
 import javafx.scene.control.Alert;
+import model.*;
 
 import java.io.IOException;
 import java.util.Scanner;

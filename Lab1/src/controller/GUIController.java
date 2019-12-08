@@ -14,7 +14,6 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import model.CLIMain;
 import model.TableContent;
 
 public class GUIController extends CLIMain {
@@ -111,7 +110,7 @@ public class GUIController extends CLIMain {
         table.setItems(data);
     }
     public void ReadButtonClick() throws Exception {
-//        model.CLIMain program = new model.CLIMain();
+//        controller.CLIMain program = new controller.CLIMain();
 //        program.write5Files(false);
 //        program.read5Files(true);
 //        if(markW == 0) {
@@ -126,7 +125,7 @@ public class GUIController extends CLIMain {
         markR = 1;
     }
 //    public void WriteButtonClick() throws Exception {
-//        model.CLIMain program = new model.CLIMain();
+//        controller.CLIMain program = new controller.CLIMain();
 //        program.write5Files(true);
 //        write5Files(true,0);
 //        markW = 1;
@@ -151,7 +150,7 @@ public class GUIController extends CLIMain {
 
         table.getItems().clear();
         String text = textfield.getText();//获取文本框输入的内容
-//        model.CLIMain program = new model.CLIMain();
+//        controller.CLIMain program = new controller.CLIMain();
 //        program.write5Files(false);
 //        program.read5Files(false);
 //        program.SearchInfoBySid(text,true, data);

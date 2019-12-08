@@ -11,7 +11,7 @@ public class Myfile {
 //    public void readFile(){};
 //    public void writeFile(){};
 
-    Myfile(String FileName) throws IOException {
+    public Myfile(String FileName) throws IOException {
         this.opfile = new File(FileName); //File opfile = new File(FileName);
         if (!opfile.exists()) {
             opfile.createNewFile();

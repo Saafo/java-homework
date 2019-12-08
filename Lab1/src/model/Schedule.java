@@ -57,7 +57,7 @@ public class Schedule implements Serializable {
         this.tid = tid;
     }
     
-    Schedule(String classid, String cid, String tid, String classroom) {
+    public Schedule(String classid, String cid, String tid, String classroom) {
         this.classid = classid;
         this.cid = cid;
         this.tid = tid;
