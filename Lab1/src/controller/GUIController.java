@@ -157,33 +157,43 @@ public class GUIController extends CLIMain {
         SearchInfoBySid(text, true, data);
     }
     @FXML
-    void WriteStuButtonClick(ActionEvent event) throws IOException {
+    void WriteStuButtonClick(ActionEvent event) throws Exception {
         String guidata = stutext.getText();
         write5Files(true,1, guidata);
+        read5Files(false);
+        markR = 1;
     }
 
     @FXML
-    void WriteTeaButtonClick(ActionEvent event) throws IOException {
+    void WriteTeaButtonClick(ActionEvent event) throws Exception {
         String guidata = teatext.getText();
         write5Files(true,2, guidata);
+        write5Files(true,1, guidata);
+        read5Files(false);
     }
 
     @FXML
-    void WriteCouButtonClick(ActionEvent event) throws IOException {
+    void WriteCouButtonClick(ActionEvent event) throws Exception {
         String guidata = coutext.getText();
         write5Files(true,3, guidata);
+        write5Files(true,1, guidata);
+        read5Files(false);
     }
 
     @FXML
-    void WriteSchButtonClick(ActionEvent event) throws IOException {
+    void WriteSchButtonClick(ActionEvent event) throws Exception {
         String guidata = schtext.getText();
         write5Files(true,4, guidata);
+        write5Files(true,1, guidata);
+        read5Files(false);
     }
 
     @FXML
-    void WriteEleButtonClick(ActionEvent event) throws IOException {
+    void WriteEleButtonClick(ActionEvent event) throws Exception {
         String guidata = eletext.getText();
         write5Files(true,5, guidata);
+        write5Files(true,1, guidata);
+        read5Files(false);
     }
 
 }
