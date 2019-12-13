@@ -1,6 +1,4 @@
-import java.io.*;
 import java.util.Arrays;
-import java.java.util.Random;
 
 public class NonThreadMergeSort {
     public static void main(String[] args){// throws IOException {
@@ -81,23 +79,4 @@ public class NonThreadMergeSort {
     }
 
 }
-class Data{
-    int length;
-    int[] data;
- 
-    public Data(int length){
-        this.length = length;
-        data = new int[length];
-    }
- 
-    public int[] getData(){
- 
-        Random random = new Random(System.currentTimeMillis());
-        for(int i=0;i<length;i++){
-            data[i]=random.nextInt(2*length);
-        }
-        return data;
-    }
- 
- 
-}
+

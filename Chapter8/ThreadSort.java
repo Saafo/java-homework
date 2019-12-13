@@ -1,5 +1,3 @@
-import java.util.Random;
- 
 public class ThreadSort {
     public static void main(String[] args) {
         int length = 10000;
@@ -58,30 +56,6 @@ public class ThreadSort {
  
  
 }
- 
- 
-/**
- * 产生随机数据
- */
-class Data{
-    int length;
-    int[] data;
- 
-    public Data(int length){
-        this.length = length;
-        data = new int[length];
-    }
- 
-    public int[] getData(){
- 
-        Random random = new Random(System.currentTimeMillis());
-        for(int i=0;i<length;i++){
-            data[i]=random.nextInt(2*length);
-        }
-        return data;
-    }
- 
- 
-}
+
 
 //2132,3523,564,23434,74,213247,343,7453,32534,978,234,89,26,68,235,87856,353,878,3535,878,355,8783,5579,42,455787,852,4578,45,45,89,54545,9,5,36,9,7,546,90796,7467,6799,656,789,7,2345,678,765432,3456,78,76543,2
