@@ -23,11 +23,11 @@ public class AutoWriteData {
     public void write5Files(boolean gui) throws IOException {
         try {
             Myfile myfile2 = new Myfile("student.data");
-            Student s1 = new Student("sid1","stu1","male", 15,"major");
-            Student s2 = new Student("sid2","stu2", "female", 14,"mmajor");
-            Student s3 = new Student("sid3","stu3", "universal", 18,"ajor");
-            Student s4 = new Student("sid4","stu4", "universal", 18,"ajor");
-            Student s5 = new Student("sid5","stu5", "universal", 18,"ajor");
+            Student s1 = new Student("sid1","stu1","male", 15,"major1");
+            Student s2 = new Student("sid2","stu2", "female", 14,"major2");
+            Student s3 = new Student("sid3","stu3", "universal", 18,"major3");
+            Student s4 = new Student("sid4","stu4", "universal", 18,"major4");
+            Student s5 = new Student("sid5","stu5", "universal", 18,"major5");
             myfile2.writeFile(s1);
             myfile2.writeFile(s2);
             myfile2.writeFile(s3);

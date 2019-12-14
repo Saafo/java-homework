@@ -161,7 +161,7 @@ public class GUIController extends CLIMain {
         String guidata = stutext.getText();
         write5Files(true,1, guidata);
         read5Files(false);
-        stutext.setText("");
+        stutext.clear();
         markR = 1;
     }
 
@@ -170,7 +170,7 @@ public class GUIController extends CLIMain {
         String guidata = teatext.getText();
         write5Files(true,2, guidata);
         read5Files(false);
-        teatext.setText("");
+        teatext.clear();
         markR = 1;
     }
 
@@ -179,7 +179,7 @@ public class GUIController extends CLIMain {
         String guidata = coutext.getText();
         write5Files(true,3, guidata);
         read5Files(false);
-        coutext.setText("");
+        coutext.clear();
         markR = 1;
     }
 
@@ -188,7 +188,7 @@ public class GUIController extends CLIMain {
         String guidata = schtext.getText();
         write5Files(true,4, guidata);
         read5Files(false);
-        schtext.setText("");
+        schtext.clear();
         markR = 1;
     }
 
@@ -197,7 +197,7 @@ public class GUIController extends CLIMain {
         String guidata = eletext.getText();
         write5Files(true,5, guidata);
         read5Files(false);
-        eletext.setText("");
+        eletext.clear();
         markR = 1;
     }
 
