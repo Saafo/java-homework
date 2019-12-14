@@ -161,6 +161,7 @@ public class GUIController extends CLIMain {
         String guidata = stutext.getText();
         write5Files(true,1, guidata);
         read5Files(false);
+        stutext.setText("");
         markR = 1;
     }
 
@@ -168,32 +169,36 @@ public class GUIController extends CLIMain {
     void WriteTeaButtonClick(ActionEvent event) throws Exception {
         String guidata = teatext.getText();
         write5Files(true,2, guidata);
-        write5Files(true,1, guidata);
         read5Files(false);
+        teatext.setText("");
+        markR = 1;
     }
 
     @FXML
     void WriteCouButtonClick(ActionEvent event) throws Exception {
         String guidata = coutext.getText();
         write5Files(true,3, guidata);
-        write5Files(true,1, guidata);
         read5Files(false);
+        coutext.setText("");
+        markR = 1;
     }
 
     @FXML
     void WriteSchButtonClick(ActionEvent event) throws Exception {
         String guidata = schtext.getText();
         write5Files(true,4, guidata);
-        write5Files(true,1, guidata);
         read5Files(false);
+        schtext.setText("");
+        markR = 1;
     }
 
     @FXML
     void WriteEleButtonClick(ActionEvent event) throws Exception {
         String guidata = eletext.getText();
         write5Files(true,5, guidata);
-        write5Files(true,1, guidata);
         read5Files(false);
+        eletext.setText("");
+        markR = 1;
     }
 
 }

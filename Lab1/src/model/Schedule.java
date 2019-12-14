@@ -3,6 +3,9 @@ package model;
 import java.io.Serializable;
 
 public class Schedule implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
     private String classid;
     private String cid;
     private String tid;

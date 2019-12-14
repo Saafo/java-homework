@@ -3,6 +3,9 @@ package model;
 import java.io.*;
 
 public class Myfile {
+
+    private static final long serialVersionUID = 1L;
+
     private File opfile;
 
     public File getOpFile() {
