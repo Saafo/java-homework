@@ -12,6 +12,7 @@ public class LANChatClient {
     PrintWriter writer;
     Socket sock;
     String LastSentMessage;
+    int flag = 0;
 
     public static void main(String[] args) {
         LANChatClient client = new LANChatClient();
@@ -61,6 +62,7 @@ public class LANChatClient {
             try {
                 writer.println(MessageToBeSentField.getText());
                 writer.flush();
+                flag = 1;
             } catch (Exception ex) {
                 ex.printStackTrace();
             }
@@ -76,10 +78,11 @@ public class LANChatClient {
             String message;
             try {
                 while ((message = reader.readLine()) != null) {
-                    Thread.sleep(100);
-                    if(!message.equals(LastSentMessage)) {
+                    if(flag != 1) {
                         System.out.println("recv: " + message);
                         ReceivedMessageArea.append("recv: " + message + "\n");
+                    } else {
+                        flag = 0;
                     }
                 }
             } catch (Exception ex) {ex.printStackTrace();}
