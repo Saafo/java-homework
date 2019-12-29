@@ -76,6 +76,7 @@ public class LANChatClient {
             String message;
             try {
                 while ((message = reader.readLine()) != null) {
+                    Thread.sleep(100);
                     if(!message.equals(LastSentMessage)) {
                         System.out.println("recv: " + message);
                         ReceivedMessageArea.append("recv: " + message + "\n");
