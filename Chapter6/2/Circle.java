@@ -2,12 +2,20 @@ public class Circle implements GeometricObject {
     protected double radius = 1.0;
 
     public Circle(double radius) {
-        self.radius = radius;
+        this.radius = radius;
     }
     public double getPerimeter() {
-        return self.radius * 2 * Math.PI;
+        return this.radius * 2 * Math.PI;
     }
     public double getArea() {
-        return self.radius * self.radius * Math.PI;
+        return this.radius * this.radius * Math.PI;
+    }
+
+    public double getRadius() {
+        return radius;
+    }
+
+    public void setRadius(double radius) {
+        this.radius = radius;
     }
 }
