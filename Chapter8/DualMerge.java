@@ -41,15 +41,19 @@ public class DualMerge extends Thread{
     }
 
     private static void multiMergeSort(int a[]){
-        if(a.length>1){
-            int[] l = Arrays.copyOfRange(a,0,a.length/2);
-            int[] r = Arrays.copyOfRange(a,a.length/2,a.length);
+        if(a.length>3){
+            int[] m1 = Arrays.copyOfRange(a,0,a.length/4);
+            int[] m2 = Arrays.copyOfRange(a,a.length/4,a.length/2);
+            int[] m3 = Arrays.copyOfRange(a,a.length/2,a.length*3/4);
+            int[] m4 = Arrays.copyOfRange(a,a.length*3/4,a.length);
+            int[] a1 = new int[a.length/2];
+            int[] a2 = new int[a.length/2];
             CountDownLatch latch = new CountDownLatch(2);
 
             new Thread(new Runnable() {
                 @Override
                 public void run() {
-                    normalMergeSort(l);
+                    normalMergeSort(m1);
                     latch.countDown();
                 }
             }).start();
@@ -57,10 +61,27 @@ public class DualMerge extends Thread{
             new Thread(new Runnable() {
                 @Override
                 public void run() {
-                    normalMergeSort(r);
+                    normalMergeSort(m2);
                     latch.countDown();
                 }
             }).start();
+
+            new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    normalMergeSort(m3);
+                    latch.countDown();
+                }
+            }).start();
+
+            new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    normalMergeSort(m4);
+                    latch.countDown();
+                }
+            }).start();
+
 
             try{
                 latch.await();
@@ -68,12 +89,14 @@ public class DualMerge extends Thread{
                 ex.printStackTrace();
             }
 
-            Merge(l,r,a);
+            Merge(m1,m2,a1);
+            Merge(m3,m4,a2);
+            Merge(a1,a2,a);
         }
     }
 
     public static void main(String[] args){
-        int length = 100000;
+        int length = 10000000;
         int[] a = new int[length];
 
         for(int i=0;i<length;i++){
@@ -90,7 +113,7 @@ public class DualMerge extends Thread{
         long time3 = System.currentTimeMillis();
         multiMergeSort(c);
         long time4 = System.currentTimeMillis();
-        System.out.println("The cost of the multi-thread merge sort is "+(time4-time3));
+        System.out.println("The cost of the multi-threads merge sort is "+(time4-time3));
 
     }
 
