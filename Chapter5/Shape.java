@@ -154,7 +154,7 @@ class Square extends Rectangle{
         this.side = side;
     }
     public String toString(){
-        return String.format("Square:color=%s, filled=%b, side=%s,",
+        return String.format("Square:color=%s, filled=%b, side=%s",
         getColor(), isFilled(), getSide());
     }
 }
