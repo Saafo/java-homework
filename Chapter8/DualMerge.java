@@ -73,11 +73,11 @@ public class DualMerge extends Thread{
     }
 
     public static void main(String[] args){
-        int length = 10000000;
+        int length = 100000000;
         int[] a = new int[length];
 
         for(int i=0;i<length;i++){
-            a[i] = (int) (Math.random()*10000000);
+            a[i] = (int) (Math.random()*100000000);
         }
 
         int b[] = a;
