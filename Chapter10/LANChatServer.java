@@ -35,8 +35,7 @@ public class LANChatServer {
 
     public void go() {
         clientOutputStreams = new ArrayList<>();
-        try {
-            ServerSocket serverSock = new ServerSocket(4999);
+        try(ServerSocket serverSock = new ServerSocket(4999)) {
 
             while(true) {
                 Socket clientSocket = serverSock.accept();
@@ -45,7 +44,7 @@ public class LANChatServer {
 
                 Thread t = new Thread(new ClientHandler(clientSocket));
                 t.start();
-                System.out.println("got a connection");
+                System.out.printf("got a connection, forward to port %d\n",clientSocket.getPort());
             }
         } catch (Exception ex) {ex.printStackTrace();}
     }
@@ -55,7 +54,7 @@ public class LANChatServer {
         while(it.hasNext()) {
             try {
                 PrintWriter writer = (PrintWriter) it.next();
-                writer.println(message);;
+                writer.println(message);
                 writer.flush();
             } catch(Exception ex){ex.printStackTrace();}
         }
